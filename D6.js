@@ -74,10 +74,11 @@ boundary(99)
  ritornare la stringa originale senza alterarla.
 */
 function epify(string){
-    let epi = "EPICODE"
-    let frase = epi + string
-    return(frase)
-    
+    if(string.starstWith("EPICODE") ){
+    return(string)
+    }else{
+        return "EPICODE " + string
+    }
 }
 
  console.log(epify("CIAOSDOASD"))
@@ -87,7 +88,7 @@ function epify(string){
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
@@ -100,7 +101,15 @@ function epify(string){
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const upFirst = (stringa) =>{
+  let parole = stringa.split(' ')   
+  for (let i = 0; i < parole.length; i++) {
+    let par = parole[i].split('')
+    console.log(parole,par);
+    
+  }
+}
+upFirst('mi piace va bene')
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
